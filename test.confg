@@ -1,0 +1,11 @@
+#!name=Cookie 
+#!desc=获取成功后禁用
+#!system=ios
+
+[MITM]
+hostname = %APPEND% api.didialift.com,bosp-api.xiaojukeji.com,as.xiaojukeji.com,manhattan.webapp.xiaojukeji.com,pay.diditaxi.com.cn, daojia.jd.com, nebula.kuaishou.com, *.rr.tv, tieba.baidu.com, *.video.qq.com,v.qq.com, mobwsa.ximalaya.com, *.rrys2020.com,ios.zmzapi.com, ifac*.iqiyi.com, api.m.jd.com, account.huami.com, wq.jd.com, *.youth.cn,ios.baertt.com, mqqapi.reader.qq.com,commontgw6.reader.qq.com,eventv3.reader.qq.com, app.kxp.com, *.snssdk.com
+
+[Script]
+
+企鹅读书获取更新body = type=http-request,pattern=https:\/\/mqqapi\.reader\.qq\.com\/log\/v4\/mqq\/track,requires-body=1,script-path=qqreads.js
+企鹅读书获取时长 = type=http-request,pattern=https:\/\/mqqapi\.reader\.qq\.com\/mqq\/addReadTimeWithBid?,script-path=qqreads.js
